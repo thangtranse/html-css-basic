@@ -1,0 +1,43 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+  float: left;
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: pink;
+}
+
+ul li > ul li {
+  list-style-type: none;
+  margin: 5px;
+  display: none;
+}
+
+ul li:hover ul li {
+  display: block;
+}
+
+ul li > ul li {
+  position: relative;
+}
+
+ul li > ul li .sub-main {
+  position: absolute;
+  width: 320px;
+  display: none;
+  float: left;
+}
+
+ul li:hover ul li:hover .sub-main {
+  display: block;
+}
