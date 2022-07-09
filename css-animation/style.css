@@ -1,0 +1,51 @@
+.box {
+  width: 150px;
+  height: 150px;
+  background: blue;
+  position: relative;
+  animation-name: boxRun;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.box-name {
+  width: 120px;
+  position: relative;
+  animation-name: boxNameRun;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes boxRun {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 100vw;
+  }
+}
+
+@keyframes boxNameRun {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: 50vw;
+    font-size: 20px;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+
+.boxTransition {
+  width: 100px;
+  height: 100px;
+  background: wheat;
+  transition: width 2s;
+}
+
+.boxTransition:hover {
+  width: 99vw;
+}
