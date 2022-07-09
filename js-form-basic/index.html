@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+    <title>JS Basic</title>
+  </head>
+  <body>
+    <form id="contact">
+      <label for="fname">Full name:</label>
+      <input type="text" id="fname" name="fname" /><br /><br />
+      <label for="lname">Content:</label>
+      <input type="text" id="content" name="content" /><br /><br />
+      <input type="submit" value="Send" />
+    </form>
+    <script>
+      const form = document.getElementById("contact");
+
+      form.addEventListener("submit", (event) => {
+        const fname = form.elements["fname"].value;
+        const content = form.elements["content"].value;
+        if (fname.length <= 0) {
+          alert("Name is null");
+        }
+        if (content.length <= 0) {
+          alert("Content is null");
+        }
+        event.preventDefault();
+      });
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
