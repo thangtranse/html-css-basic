@@ -6,38 +6,34 @@ ul {
 ul li {
   list-style-type: none;
   float: left;
+  position: relative;
   margin: 5px;
 }
 
-a {
+ul li a {
   text-decoration: none;
 }
 
-a:hover {
+ul li a:hover {
   color: pink;
 }
 
-ul li > ul li {
+ul li .sub-main {
   list-style-type: none;
-  margin: 5px;
+  padding: 5px;
   display: none;
+  position: absolute;
+  width: 150px;
 }
 
-ul li:hover ul li {
+ul li:hover .sub-main {
   display: block;
 }
 
-ul li > ul li {
-  position: relative;
-}
-
-ul li > ul li .sub-main {
-  position: absolute;
-  width: 320px;
+ul li .sub-main li .sub-main {
   display: none;
-  float: left;
 }
 
-ul li:hover ul li:hover .sub-main {
+ul li .sub-main li:hover .sub-main {
   display: block;
 }
