@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+    <title>JS Basic</title>
+  </head>
+  <body>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="./assets/images/tay-bac-1.jpeg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="./assets/images/tay-bac-2.jpeg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="./assets/images/tay-bac-3.jpeg" style="width: 100%" />
+      </div>
+    </div>
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+
+    <br />
+
+    <script>
+      var slideIndex;
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex].style.display = "block";
+        dots[slideIndex].className += " active";
+        slideIndex++;
+        if (slideIndex > slides.length - 1) {
+          slideIndex = 0;
+        } 
+        setTimeout(showSlides, 5000);
+      }
+      showSlides((slideIndex = 0));
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+    </script>
+  </body>
+</html>
