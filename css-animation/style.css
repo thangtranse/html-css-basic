@@ -43,9 +43,10 @@
   width: 100px;
   height: 100px;
   background: wheat;
-  transition: width 2s;
+  transition: width 2s, height 5s;
 }
 
 .boxTransition:hover {
-  width: 99vw;
+  width: 100vw; 
+  height: 100vh;
 }
