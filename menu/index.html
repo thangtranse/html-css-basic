@@ -4,10 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link type="text/css" rel="stylesheet" href="./style.css" />
+    <!-- <link type="text/css" rel="stylesheet" href="./style.css" /> -->
     <title>Menu CSS</title>
+    <style>
+      ul li {
+        list-style-type: none;
+      }
+
+      .nav1 {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .nav1 li {
+        padding: 10px;
+      }
+
+      .nav1 li:hover {
+        color: red;
+      }
+
+      .nav1 li:hover .nav2 {
+        display: block;
+      }
+
+      .nav2,
+      .nav3 {
+        display: none;
+      }
+    </style>
   </head>
   <body>
+    <!-- trên -->
+    <ul class="nav1">
+      <li>Home 1.1</li>
+      <li>
+        Home 1.2
+        <ul class="nav2">
+          <li>Home 2.1</li>
+          <li>Home 2.2</li>
+          <li>
+            Home 2.3
+            <ul class="nav3">
+              <li>Home 3.1</li>
+              <li>Home 3.2</li>
+              <li>Home 3.3</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Home 1.2</li>
+    </ul>
+    <!-- dưới -->
+    <br />
+    <br />
+    <br />
+
     <ul>
       <li><a href="#">Home</a></li>
       <li>

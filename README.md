@@ -6,12 +6,12 @@ Ghi chú lại các trường hợp ít sử dụng nhưng hay xuất hiện tro
 
 Difference Between Inline and Block Elements in HTML
 
-|Block Elements	|Inline Elements|
-|---------------|---------------|
-|Block elements always start from a new line.|Inline elements never start from a new line.|
-|Block elements cover space from left to right as far as it can go.|Inline elements only cover the space as bounded by the tags in the HTML element.|
-|Block elements have top and bottom margins.|Inline elements don't have a top and bottom margin.|
-|Examples of block elements - \<p>,\<div>,\<hr>.|Examples of inline elements - \<span>,\<br>|
+| Block Elements                                                     | Inline Elements                                                                  |
+| ------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| Block elements always start from a new line.                       | Inline elements never start from a new line.                                     |
+| Block elements cover space from left to right as far as it can go. | Inline elements only cover the space as bounded by the tags in the HTML element. |
+| Block elements have top and bottom margins.                        | Inline elements don't have a top and bottom margin.                              |
+| Examples of block elements - \<p>,\<div>,\<hr>.                    | Examples of inline elements - \<span>,\<br>                                      |
 
 - https://htmlreference.io/
 
@@ -54,11 +54,26 @@ desktops, 1200px and up) */
   }
 }
 ```
+
 - [Example CSS responsive](https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_breakpoints)
 - [CSS template](https://www.w3schools.com/css/css_rwd_templates.asp)
-
-
 
 ### Reference
 
 1. https://www.w3schools.com
+
+```html
+<ul>
+  <li>Home</li>
+  <li>Data 1</li>
+  <li>Data 2</li>
+  <li>
+    Liên hệ
+
+    <ul>
+      <li>LH - Data 1</li>
+      <li>LH - Data 2</li>
+    </ul>
+  </li>
+</ul>
+```
